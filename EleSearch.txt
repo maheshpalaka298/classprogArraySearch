@@ -1,0 +1,62 @@
+/*Program to find an Element in an array (Linear search)*/
+import java.util.*;
+class  EleSearch
+{
+	public static void main(String[] args) 
+	{
+		Scanner s=new Scanner(System.in);
+		int n,key,find=0;
+		System.out.println("Enter number of elements : ");
+		n=s.nextInt();
+		int ele[]=new int[n];
+		System.out.println("Enter  "+n+" elements : ");
+		for(int i=0;i<n;i++)
+		{
+			ele[i]=s.nextInt();
+		}
+		System.out.println("Enter an Element to search : ");
+		key=s.nextInt();
+		for(int i=0;i<n;i++)
+		{
+			if (ele[i]==key)
+			{
+				System.out.println("Element "+key+" is found at "+i);
+				find=1;
+				break;
+			}
+		}
+		if (find==0)
+		{
+			System.out.println("Element "+key+" is not found");
+		}
+	}
+}
+
+//Output1//
+Enter number of elements :
+5
+Enter  5 elements :
+1
+2
+3
+4
+5
+Enter an Element to search :
+6
+Element 6 is not found
+Press any key to continue . . .
+//Output2//
+Enter number of elements :
+7
+Enter  7 elements :
+23
+24
+25
+26
+45
+48
+0
+Enter an Element to search :
+25
+Element 25 is found at 2
+Press any key to continue . . .
